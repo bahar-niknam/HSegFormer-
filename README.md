@@ -1,29 +1,62 @@
 # HSegFormer+
-HSegFormer+: Hybrid CNN–Transformer With Stage Attention for Brain Tumor MRI Segmentation
+## Hybrid CNN–Transformer with Stage Attention for Brain Tumor MRI Segmentation
 
-This repository provides the implementation of **HSegFormer+**, a hybrid deep learning framework developed for automatic brain tumor segmentation in contrast-enhanced T1-weighted MRI.
+This repository provides the implementation of **HSegFormer+**, a hybrid deep learning framework designed for automatic brain tumor segmentation in contrast-enhanced T1-weighted MRI.
 
-The associated manuscript is currently under submission. Detailed architectural descriptions and experimental analyses will be made publicly available after publication.
+The associated manuscript is currently under submission. Detailed architectural specifications and experimental analyses will be made publicly available after publication.
 
 ---
 
 ## Overview
 
-Accurate tumor delineation from MRI is essential for diagnosis, treatment planning, and follow-up assessment. However, segmentation remains challenging due to heterogeneous tumor appearance, weak boundaries, and variability across acquisition settings.
+Accurate brain tumor segmentation from MRI is critical for diagnosis, treatment planning, and disease monitoring. However, reliable tumor delineation remains challenging due to:
 
-HSegFormer+ adopts a hybrid encoder–decoder segmentation strategy that integrates convolutional representations with transformer-based contextual modeling to improve robustness and segmentation quality while maintaining practical inference efficiency.
+- heterogeneous tumor appearance,
+- low-contrast and ambiguous boundaries,
+- variations in acquisition protocols,
+- large inter-patient variability.
+
+**HSegFormer+** addresses these challenges through a hybrid encoder–decoder segmentation framework that combines convolutional feature extraction with transformer-based contextual modeling. The model aims to capture both fine local details and long-range contextual dependencies while maintaining practical inference efficiency.
 
 ---
 
 ## Architecture Overview
 
 <p align="center">
-  <img src="figures/architecture.png" width="95%">
+  <img src="figures/Hseg.jpg" width="95%">
 </p>
 
-The framework combines complementary feature representations within a unified segmentation pipeline to produce accurate tumor masks across diverse MRI data conditions.
+The overall framework integrates convolutional and transformer representations followed by multi-stage decoding to generate accurate tumor segmentation masks. The architecture is designed to leverage complementary feature representations across multiple semantic levels.
+
+Detailed architectural components are omitted here to preserve submission anonymity and will be released after publication.
 
 ---
 
 ## Repository Structure
+HSegFormer/
+│
+├── models/ # Network architecture implementation
+│ ├── encoder/ # Feature extraction modules
+│ ├── decoder/ # Segmentation decoding modules
+│ └── hsegformer.py # Main model definition
+│
+├── datasets/ # Dataset loaders and preprocessing
+│
+├── losses/ # Training loss functions
+│
+├── train.py # Model training pipeline
+├── evaluate.py # Validation & testing scripts
+├── inference.py # Inference on unseen MRI scans
+│
+├── figures/
+│ └── Hseg.jpg # Architecture diagram
+│
+└── README.md
+
+
+---
+
+## Citation
+
+Citation details will be provided upon publication.
 
