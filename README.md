@@ -1,4 +1,4 @@
-# HSegFormer-
+# HSegFormer+
 HSegFormer+: Hybrid CNN–Transformer With Stage Attention for Brain Tumor MRI Segmentation
 
 This repository provides the implementation of **HSegFormer+**, a hybrid deep learning framework developed for automatic brain tumor segmentation in contrast-enhanced T1-weighted MRI.
