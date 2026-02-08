@@ -1,23 +1,82 @@
 # HSegFormer+
+
 Hybrid CNN–Transformer with Stage-wise Attention for Brain Tumor MRI Segmentation
 
-This repository contains the implementation of HSegFormer+, a hybrid CNN–Transformer framework for automatic brain tumor segmentation in contrast-enhanced T1-weighted MRI.
+This repository presents HSegFormer+, a hybrid deep learning framework designed for automatic brain tumor segmentation in contrast-enhanced T1-weighted MRI.
 
-The associated manuscript is currently under blind review. Detailed architectural descriptions, ablation studies, and trained models will be released upon publication.
+The associated manuscript is currently under blind peer review. Full implementation details, experimental settings, and pretrained weights will be released after publication.
 
 # Overview
 
-Brain tumor segmentation is essential for diagnosis, treatment planning, and longitudinal monitoring, yet remains challenging due to heterogeneous tumor appearance, low-contrast boundaries, class imbalance, and cross-center variability.
+Accurate brain tumor segmentation plays a critical role in:
 
-HSegFormer+ addresses these challenges through a hybrid encoder–decoder architecture that combines convolutional feature extraction with transformer-based global context modeling. By integrating local spatial detail with long-range semantic dependencies, the model improves boundary delineation and coverage of small or irregular tumor regions while maintaining practical inference efficiency.
+Clinical diagnosis
 
-Architecture Overview
+Treatment planning and radiotherapy targeting
+
+Longitudinal tumor monitoring
+
+Quantitative volumetric analysis
+
+However, automatic segmentation remains challenging due to:
+
+Heterogeneous tumor appearance
+
+Low-contrast and fuzzy boundaries
+
+Severe foreground–background class imbalance
+
+Cross-institution imaging variability
+
+HSegFormer+ is designed to address these challenges through a hybrid encoder–decoder architecture that integrates:
+
+Local spatial feature extraction via CNNs
+
+Global contextual modeling via Transformer attention
+
+By combining both representation paradigms, the model improves:
+
+✔ Boundary delineation
+✔ Detection of small or irregular lesions
+✔ Robustness across datasets
+✔ Accuracy–efficiency trade-off for practical deployment
+
+# Architecture Overview
 <p align="center"> <img src="Hseg.jpg" width="95%"> </p>
 
-HSegFormer+ employs a dual-path hybrid encoder that fuses convolutional and transformer representations at multiple semantic stages, followed by an attention-guided decoder with multi-scale feature integration and deep supervision. This design enables precise tumor localization and robust segmentation across varying tumor sizes and contrast conditions.
+HSegFormer+ introduces a dual-path hybrid encoder that simultaneously processes input images through:
 
-Architectural and training details are omitted to preserve submission anonymity and will be made available after publication.
+A convolutional backbone for fine-grained spatial features
 
-# Citation
+A hierarchical transformer backbone for long-range semantic dependencies
 
-Citation details will be provided upon publication.
+The extracted representations are fused across multiple semantic stages and passed into an attention-guided decoder featuring:
+
+Multi-scale feature fusion
+
+Stage-wise attention refinement
+
+Deep supervision for stable optimization
+
+This architectural design enables accurate tumor localization across diverse tumor morphologies, sizes, and contrast conditions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
